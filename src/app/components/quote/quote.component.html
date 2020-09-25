@@ -1,1 +1,8 @@
-<p>quote works!</p>
+<ul>
+    <li *ngFor = "let quote of quotes">
+        {{quote.quote}}
+        <br>
+        <app-vote [quote]="quote"></app-vote>
+        <app-quote-details [quote]="quote"></app-quote-details>
+    </li>
+</ul>

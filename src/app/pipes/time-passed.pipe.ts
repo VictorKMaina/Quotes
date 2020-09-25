@@ -5,8 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimePassedPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(entryTime: Date) {
+    let currentTime = new Date();
+    let pastTime = currentTime.getSeconds() - entryTime.getSeconds();
+    return pastTime + " seconds";
   }
 
 }

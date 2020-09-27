@@ -1,1 +1,15 @@
-<p>quote-form works!</p>
+<form (ngSubmit)="submitQuote()" action="" #form = "ngForm">
+    <div>
+        <label class="" for="quote">Quote</label><br>
+        <textarea name="quote" id="quote" cols="30" rows="10" [(ngModel)]="newQuote.quote"></textarea>
+    </div>
+    <div>
+        <label class="" for="name">Your Name</label><br>
+        <input class="" type="text" id="name" name="name" [(ngModel)]="newQuote.submitter">
+    </div>
+    <div>
+        <label class="" for="author">Quote's Author</label><br>
+        <input class="" type="text" id="author" name="author" [(ngModel)]="newQuote.author">
+    </div>
+    <button>Submit</button>
+</form>

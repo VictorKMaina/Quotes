@@ -1,8 +1,9 @@
 <ul>
-    <li *ngFor = "let quote of quotes">
+    <li *ngFor = "let quote of quotes; let i = index" [quote]="quote" appHighestVote (click)="findHighestUpvote(quotes)" >
         {{quote.quote}}
         <br>
         <app-vote [quote]="quote"></app-vote>
         <app-quote-details [quote]="quote"></app-quote-details>
     </li>
 </ul>
+<app-quote-form (addNewQuote)="newQuote($event)"></app-quote-form>

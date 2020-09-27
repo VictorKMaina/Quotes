@@ -1,5 +1,5 @@
-import { Quote } from '../../quote';
-import { Component, Input, OnInit } from '@angular/core';
+// import { Quote } from '../../quote';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-vote',
@@ -8,15 +8,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class VoteComponent implements OnInit {
 
-  @Input() quote: Quote;
+  @Input() quote;
+  @Output() thisEvent = new EventEmitter<string>();
 
-  upVote(upvote){
+  upvote(){
     this.quote.upvote += 1;
-    return this.quote.upvote;
+    this.thisEvent.emit("upvote");
   }
-  downVote(downvote){
+  downvote(){
     this.quote.downvote += 1;
-    return this.quote.downvote;
+    this.thisEvent.emit("downvote");
   }
 
   constructor() { }

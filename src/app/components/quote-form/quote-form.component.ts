@@ -14,6 +14,7 @@ export class QuoteFormComponent implements OnInit {
   submitQuote(){
     let tempQuote = Object.assign({}, this.newQuote)
     this.addNewQuote.emit(tempQuote);
+    
   }
 
   constructor() { }

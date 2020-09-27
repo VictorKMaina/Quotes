@@ -1,15 +1,19 @@
 <form (ngSubmit)="submitQuote()" action="" #form = "ngForm">
     <div>
         <label class="" for="quote">Quote</label><br>
-        <textarea name="quote" id="quote" cols="25" rows="10" [(ngModel)]="newQuote.quote"></textarea>
+        <textarea name="quote" id="quote" cols="25" rows="10" [(ngModel)]="newQuote.quote" #quoteField = "ngModel" required></textarea>
+        <div [hidden]="quoteField.valid || quoteField.pristine">This field is required.</div>
     </div>
     <div>
         <label class="" for="name">Your Name</label><br>
-        <input class="" type="text" id="name" name="name" [(ngModel)]="newQuote.submitter">
+        <input class="" type="text" id="name" name="name" [(ngModel)]="newQuote.submitter" required #name = "ngModel">
+        <div [hidden]="name.valid || name.pristine">
+            This field is required.
+        </div>
     </div>
     <div>
         <label class="" for="author">Quote's Author</label><br>
         <input class="" type="text" id="author" name="author" [(ngModel)]="newQuote.author">
     </div>
-    <button>Submit</button>
+    <button [disabled]="!form.valid">Submit</button>
 </form>

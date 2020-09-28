@@ -7,7 +7,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TimePassedPipe implements PipeTransform {
 
   transform(entryTime: Date) {
-    let timePassed = (new Date().getTime()) - entryTime.getTime();
-    return Math.round(timePassed/60000);
+    let currentTime = new Date().getTime();
+    let timePassed = currentTime - entryTime.getTime();
+    return Math.round(timePassed/1000);
   }
 }

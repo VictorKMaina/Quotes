@@ -10,7 +10,7 @@ export class HighestVoteDirective implements OnInit{
 
   @HostListener("window:click") mouse(){
     if (this.quote.maxUpvote === true){
-      this.element.nativeElement.style.backgroundColor = "red";
+      this.element.nativeElement.style.backgroundColor = "#FFE600aa";
       console.log("yes")
     } else {
       this.quote.maxUpvote = false;

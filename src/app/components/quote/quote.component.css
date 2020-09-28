@@ -1,6 +1,6 @@
-        .quote {
-            padding: 50px;
-            padding-bottom: 25px;
+        .quote-div {
+            padding: 40px;
+            padding-top: 40px;
             border: 1px solid #000000;
             box-sizing: border-box;
             border-radius: 10px;
@@ -14,4 +14,9 @@
             height: 100%;
             position: fixed;
             width: 450px;
+        }
+        
+        .quote {
+            font-family: Montserrat;
+            margin-bottom: 10px;
         }

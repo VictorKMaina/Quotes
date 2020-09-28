@@ -35,6 +35,9 @@ export class QuoteComponent implements OnInit {
   }
   newQuote(quote){
     this.quotes.push(quote);
+    setTimeout(()=>{
+      window.scrollTo(0,document.body.scrollHeight);
+    }, 250)
   }
 
 

@@ -1,19 +1,22 @@
-<form (ngSubmit)="submitQuote()" action="" #form = "ngForm">
-    <div>
-        <label class="" for="quote">Quote</label><br>
-        <textarea name="quote" id="quote" cols="25" rows="10" [(ngModel)]="newQuote.quote" #quoteField = "ngModel" required></textarea>
-        <div [hidden]="quoteField.valid || quoteField.pristine">This field is required.</div>
-    </div>
-    <div>
-        <label class="" for="name">Your Name</label><br>
-        <input class="" type="text" id="name" name="name" [(ngModel)]="newQuote.submitter" required #name = "ngModel">
+<p id="form-title">New Quote</p>
+<form (ngSubmit)="submitQuote()" action="" #form="ngForm">
+    <div class="form-group">
+        <label class="" for="name">Name</label><br>
+        <input class="form-control" type="text" id="name" name="name" [(ngModel)]="newQuote.submitter" required #name="ngModel">
         <div [hidden]="name.valid || name.pristine">
             This field is required.
         </div>
     </div>
-    <div>
+    <div class="form-group">
         <label class="" for="author">Quote's Author</label><br>
-        <input class="" type="text" id="author" name="author" [(ngModel)]="newQuote.author">
+        <input class="form-control w-100" type="text" id="author" name="author" [(ngModel)]="newQuote.author">
     </div>
-    <button [disabled]="!form.valid">Submit</button>
+    <div class="form-group">
+        <label for="quote">Quote</label><br>
+        <textarea class="" name="quote" id="quote" [(ngModel)]="newQuote.quote" #quoteField="ngModel" required></textarea>
+        <div [hidden]="quoteField.valid || quoteField.pristine">This field is required.</div>
+    </div>
+
+
+    <button [disabled]="!form.valid" class="btn btn-warning" id="submit">Submit</button>
 </form>

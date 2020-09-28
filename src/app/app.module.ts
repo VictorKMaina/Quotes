@@ -10,6 +10,7 @@ import { QuoteDetailsComponent } from './components/quote-details/quote-details.
 import { TimePassedPipe } from './pipes/time-passed.pipe';
 import { VoteComponent } from './components/vote/vote.component';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     QuoteComponent,
     QuoteDetailsComponent,
     TimePassedPipe,
-    VoteComponent
+    VoteComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

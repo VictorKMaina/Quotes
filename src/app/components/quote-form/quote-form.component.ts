@@ -8,6 +8,8 @@ import { Quote } from "../../quote"
 })
 export class QuoteFormComponent implements OnInit {
 
+  public placeholder = "Your Name..."
+
   public newQuote = new Quote(0, "", 0, 0, "", "", new Date());
   @Output() addNewQuote = new EventEmitter<Quote>();
 

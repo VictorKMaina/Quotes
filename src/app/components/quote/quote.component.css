@@ -1,0 +1,17 @@
+        .quote {
+            padding: 50px;
+            padding-bottom: 25px;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        #quote-form {
+            background-color: #474747;
+            border-radius: 25px 25px 0px 0px;
+            padding: 50px;
+            height: 100%;
+            position: fixed;
+            width: 450px;
+        }

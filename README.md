@@ -1,4 +1,4 @@
-##### [Deployed site](victorkmaina.github.io/Quotes/)
+##### [Deployed site](https://victorkmaina.github.io/Quotes/)
 ##### [Figma Design](https://www.figma.com/file/m3rK4gh3dzDplYbwUDjxf8/Quotes-App?node-id=1%3A7)
 
 
